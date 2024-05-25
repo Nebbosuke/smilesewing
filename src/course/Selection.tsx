@@ -18,8 +18,8 @@ import SelectFour from "./selectFour";
 import React, { useLayoutEffect, useState } from "react";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { Link as Scroll } from "react-scroll";
-import ReturnTop2 from "../ReturnTop2";
-import Jump from "../Jump";
+import ReturnTop2 from "../component/ReturnTop2";
+import Jump from "../component/Jump";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 interface TabPanelProps {
@@ -105,108 +105,117 @@ const Selection = () => {
   };
 
   return (
-    <div className="container flex flex-col mx-auto items-center px-5 py-10">
-      <p className="flex flex-row w-full md:text-5xl text-2xl text-left mb-6 gap-3">
-        <div className="flex flex-row w-9/12">
-          <MenuBookIcon fontSize="inherit" color="warning" />
-          <p>レッスンコース</p>
-        </div>
-        <div className="w-1/2 flex justify-end">
-          <Jump id={"top"} value={"トップへ"} />
-        </div>
-      </p>
-      <p>選べる４つのコース</p>
-      <Box
-        sx={{
-          borderBottom: 1,
-          borderColor: "divider",
-        }}
-      >
-        {useWindowSize(1024) && (
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            // variant="scrollable"
-            // scrollButtons
-            // allowScrollButtonsMobile
-            aria-label="basic tabs example"
-            sx={{
-              width: "auto",
-            }}
-          >
-            <Tab label={"自由レッスンコース"} {...a11yProps(0)} />
-            <Tab label={"デザインレッスンコース"} {...a11yProps(1)} />
-            <Tab label={"子供服レッスンコース"} {...a11yProps(2)} />
-            <Tab label={"着物リメイクレッスンコース"} {...a11yProps(3)} />
-          </Tabs>
-        )}
-        {!useWindowSize(1024) && (
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            // variant="scrollable"
-            // scrollButtons
-            // allowScrollButtonsMobile
-            aria-label="basic tabs example"
-            sx={{
-              width: "auto",
-            }}
-          >
-            <Tab
-              label={
-                <LooksOneIcon fontSize="medium" color="primary"></LooksOneIcon>
-              }
-              {...a11yProps(0)}
-            />
-            <Tab
-              label={
-                <LooksTwoIcon
-                  fontSize="medium"
-                  color="secondary"
-                ></LooksTwoIcon>
-              }
-              {...a11yProps(1)}
-            />
-            <Tab
-              label={
-                <Looks3Icon fontSize="medium" color="success"></Looks3Icon>
-              }
-              {...a11yProps(2)}
-            />
-            <Tab
-              label={<Looks4Icon fontSize="medium" color="error"></Looks4Icon>}
-              {...a11yProps(3)}
-            />
-          </Tabs>
-        )}
-      </Box>
-      <CustomTabPanel value={value} index={0}>
-        <SelectOne />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <SelectTwo />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <SelectThree />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={3}>
-        <SelectFour />
-      </CustomTabPanel>
-      <div className="w-full flex flex-col py-5">
-        <div className="py-3 flex  md:flex-row flex-col items-center">
-          <div className="md:w-1/3"></div>
-          <div className="md:w-1/3 pb-6 md:flex justify-center">
-            <Scroll to="contact" smooth={true}>
-              <ThemeProvider theme={theme}>
-                <Button variant="contained" color="ochre">
-                  お問い合わせ
-                </Button>
-              </ThemeProvider>
-            </Scroll>
+    <section
+      id="selection"
+      className="text-black bg-gradient-to-bl from-orange-100 via-white to-orange-100 py-12"
+    >
+      <div className="container flex flex-col mx-auto items-center px-5 py-10">
+        <p className="flex flex-row w-full md:text-5xl text-2xl text-left mb-6 gap-3">
+          <div className="flex flex-row w-9/12">
+            <MenuBookIcon fontSize="inherit" color="warning" />
+            <p>レッスンコース</p>
           </div>
-          <div className="md:w-1/3 text-lg md:flex pb-3 items-center justify-end">
-            <Jump id={"selection"} value="ちょっと上へ" />
-            {/* <Scroll to="selection" smooth={true}>
+          <div className="w-1/2 flex justify-end">
+            <Jump id={"top"} value={"トップへ"} />
+          </div>
+        </p>
+        <p>選べる４つのコース</p>
+        <Box
+          sx={{
+            borderBottom: 1,
+            borderColor: "divider",
+          }}
+        >
+          {useWindowSize(1024) && (
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              // variant="scrollable"
+              // scrollButtons
+              // allowScrollButtonsMobile
+              aria-label="basic tabs example"
+              sx={{
+                width: "auto",
+              }}
+            >
+              <Tab label={"自由レッスンコース"} {...a11yProps(0)} />
+              <Tab label={"基礎レッスンコース"} {...a11yProps(1)} />
+              <Tab label={"子供服レッスンコース"} {...a11yProps(2)} />
+              <Tab label={"着物リメイクレッスンコース"} {...a11yProps(3)} />
+            </Tabs>
+          )}
+          {!useWindowSize(1024) && (
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              // variant="scrollable"
+              // scrollButtons
+              // allowScrollButtonsMobile
+              aria-label="basic tabs example"
+              sx={{
+                width: "auto",
+              }}
+            >
+              <Tab
+                label={
+                  <LooksOneIcon
+                    fontSize="medium"
+                    color="primary"
+                  ></LooksOneIcon>
+                }
+                {...a11yProps(0)}
+              />
+              <Tab
+                label={
+                  <LooksTwoIcon
+                    fontSize="medium"
+                    color="secondary"
+                  ></LooksTwoIcon>
+                }
+                {...a11yProps(1)}
+              />
+              <Tab
+                label={
+                  <Looks3Icon fontSize="medium" color="success"></Looks3Icon>
+                }
+                {...a11yProps(2)}
+              />
+              <Tab
+                label={
+                  <Looks4Icon fontSize="medium" color="error"></Looks4Icon>
+                }
+                {...a11yProps(3)}
+              />
+            </Tabs>
+          )}
+        </Box>
+        <CustomTabPanel value={value} index={0}>
+          <SelectOne />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <SelectTwo />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={2}>
+          <SelectThree />
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={3}>
+          <SelectFour />
+        </CustomTabPanel>
+        <div className="w-full flex flex-col py-5">
+          <div className="py-3 flex  md:flex-row flex-col items-center">
+            <div className="md:w-1/3"></div>
+            <div className="md:w-1/3 pb-6 md:flex justify-center">
+              <Scroll to="contact" smooth={true}>
+                <ThemeProvider theme={theme}>
+                  <Button variant="contained" color="ochre">
+                    お問い合わせ
+                  </Button>
+                </ThemeProvider>
+              </Scroll>
+            </div>
+            <div className="md:w-1/3 text-lg md:flex pb-3 items-center justify-end">
+              <Jump id={"selection"} value="ちょっと上へ" />
+              {/* <Scroll to="selection" smooth={true}>
               <ThemeProvider theme={theme}>
                 <Button variant="outlined" color="inherit">
                   <div className="text-xs">
@@ -215,10 +224,11 @@ const Selection = () => {
                 </Button>
               </ThemeProvider>
             </Scroll> */}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Selection;

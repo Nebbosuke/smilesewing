@@ -1,5 +1,4 @@
-import img1 from "./imgs/img1.jpg";
-import img2 from "./img1/S__6340610.jpg";
+import img2 from "./img/S__6340610.jpg";
 // import img3 from "./img1/S__6340612.jpg"
 // import img3 from "./img1/S__6340613.jpg"
 // import img3 from "./img1/S__6340614.jpg"
@@ -13,6 +12,6 @@ import img2 from "./img1/S__6340610.jpg";
 // import img3 from "./img1/S__6340624.jpg"
 import img3 from "./img1/S__6340625.jpg";
 
-const imgList = [img1];
+const imgList = [img2];
 
 export default imgList;

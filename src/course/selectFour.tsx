@@ -9,13 +9,10 @@ const SelectFour = () => {
         </div>
         <div className="flex flex-row md:gap-6 lg:gap-10 gap-1 justify-center items-center my-20">
           <p className="w-40 h-40 flex flex-col justify-center items-center rounded-full border-4 border-red-300">
-            <p>手縫いで</p>
             <p>着物をリメイク</p>
           </p>
         </div>
-        <p className="mb-6">手縫いで着物をリメイクするレッスン</p>
-        <p className="mb-6">８人グループ制</p>
-        <p className="mb-6">出張あり</p>
+        <p className="mb-6">着物をリメイクするレッスン</p>
       </div>
 
       <TableThree title={"着物リメイクレッスンコース"} />
