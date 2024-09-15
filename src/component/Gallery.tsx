@@ -36,9 +36,9 @@ const Gallery = () => {
     <>
       <section
         id="gallery"
-        className="text-black bg-gradient-to-br from-orange-100 via-white to-orange-100  py-12 pb-56"
+        className="text-black bg-gradient-to-br from-orange-100 via-white to-orange-100 py-12 pb-24 flex flex-col"
       >
-        <div className="container flex mx-auto flex-col items-center px-5 pb-10">
+        <div className="container flex mx-auto flex-col items-center px-5">
           <div className="flex flex-row w-full md:text-5xl text-2xl text-left mb-6 gap-3">
             <CameraAltIcon fontSize="inherit" color="warning" />
             <p className="w-2/3">ギャラリー</p>
@@ -47,18 +47,18 @@ const Gallery = () => {
             </p>
           </div>
           <div>
-            <div className="pb-32">
-              <div className="flex flex-row md:text-4xl text-xl pt-10 justify-center text-yellow-400">
+            <div className="flex flex-col">
+              {/* <div className="flex flex-row md:text-4xl text-xl pt-10 justify-center text-yellow-400">
                 <AutoAwesomeIcon fontSize="inherit" />
                 <div className=" text-black md:px-6 px-2  md:pb-8 pb-3">
                   講師の作品
                 </div>
                 <AutoAwesomeIcon fontSize="inherit" />
-              </div>
+              </div> */}
 
               <div className="w-full flex flex-row">
                 {useWindowSize() === "l" && (
-                  <Box sx={{ width: 900, height: 800, overflowY: "auto" }}>
+                  <Box sx={{ width: 900, height: 1700, overflowY: "visible" }}>
                     <ImageList variant="masonry" cols={5} gap={8}>
                       {imgList.map((item) => (
                         <ImageListItem key={item}>
@@ -80,7 +80,7 @@ const Gallery = () => {
                   </Box>
                 )}
                 {useWindowSize() === "s" && (
-                  <Box sx={{ width: 300, height: 200, overflowY: "scroll" }}>
+                  <Box sx={{ width: 300, height: 500, overflowY: "scroll" }}>
                     <ImageList variant="masonry" cols={3} gap={3}>
                       {imgList.map((item) => (
                         <ImageListItem key={item}>
@@ -92,12 +92,12 @@ const Gallery = () => {
                 )}
               </div>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <ConstructionIcon fontSize="inherit" />
               工事中
               <ConstructionIcon fontSize="inherit" />
-            </div>
-            <div className="flex flex-row md:text-4xl text-xl pt-10 justify-center text-yellow-400">
+            </div> */}
+            {/* <div className="flex flex-row md:text-4xl text-xl pt-10 justify-center text-yellow-400">
               <AutoAwesomeIcon fontSize="inherit" />
               <div className=" text-black md:px-6 px-2 md:pb-8 pb-3">
                 レッスンの様子
@@ -110,7 +110,7 @@ const Gallery = () => {
                 生徒の作品
               </div>
               <AutoAwesomeIcon fontSize="inherit" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

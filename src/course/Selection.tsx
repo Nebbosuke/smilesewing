@@ -115,9 +115,9 @@ const Selection = () => {
             <MenuBookIcon fontSize="inherit" color="warning" />
             <p>レッスンコース</p>
           </div>
-          <div className="w-1/2 flex justify-end">
+          {/* <div className="w-1/2 flex justify-end">
             <Jump id={"top"} value={"トップへ"} />
-          </div>
+          </div> */}
         </p>
         <p>選べる４つのコース</p>
         <Box
@@ -214,7 +214,7 @@ const Selection = () => {
               </Scroll>
             </div>
             <div className="md:w-1/3 text-lg md:flex pb-3 items-center justify-end">
-              <Jump id={"selection"} value="ちょっと上へ" />
+              {/* <Jump id={"selection"} value="ちょっと上へ" /> */}
               {/* <Scroll to="selection" smooth={true}>
               <ThemeProvider theme={theme}>
                 <Button variant="outlined" color="inherit">

@@ -28,13 +28,6 @@ const Contact = () => {
           <div className="flex flex-col md:text-3xl text-xl mb-12 pt-3 text-white items-center">
             <div className="flex flex-row mb-4">
               <div className="text-yellow-300">
-                <PhoneAndroidIcon fontSize="inherit" />
-              </div>
-
-              <p className="ml-1 pb-1">090-4618-1997</p>
-            </div>
-            <div className="flex flex-row mb-4">
-              <div className="text-yellow-300">
                 <EmailIcon fontSize="inherit" />
               </div>
 

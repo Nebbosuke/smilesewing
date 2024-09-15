@@ -30,16 +30,16 @@ const ButtonGroups = () => {
   return (
     <div className="text-sm text-white gap-3">
       <Scroll to="intro" smooth={true} className="mr-3">
-        <button className=" hover:text-black">講師紹介</button>
+        <button className=" hover:text-yellow-300">講師紹介</button>
       </Scroll>
       <Scroll to="selection" smooth={true} className="mr-3">
-        <button className=" hover:text-black">レッスン</button>
+        <button className=" hover:text-yellow-300">レッスン</button>
       </Scroll>
       <Scroll to="gallery" smooth={true} className="mr-3">
-        <button className=" hover:text-black">ギャラリー</button>
+        <button className=" hover:text-yellow-300">ギャラリー</button>
       </Scroll>
       <Scroll to="contact" smooth={true}>
-        <button className=" hover:text-black">お問い合わせ</button>
+        <button className=" hover:text-yellow-300">お問い合わせ</button>
       </Scroll>
     </div>
   );

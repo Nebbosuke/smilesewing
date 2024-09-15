@@ -45,13 +45,13 @@ const TableTwo: React.FC<TableTwoProps> = ({ title }) => {
           <TableBody>
             <TableRow>
               <StyledTableCell>１回 / 月</StyledTableCell>
-              <TableCell align="right">2,500円</TableCell>
+              <TableCell align="right">3,000円</TableCell>
               <TableCell align="right">3,750円</TableCell>
             </TableRow>
             <TableRow>
               <StyledTableCell>４回 / 月</StyledTableCell>
               <TableCell align="right">
-                <p>9,500円</p>
+                <p>11,500円</p>
                 <p text-gray-600></p>
               </TableCell>
               <TableCell align="right">
