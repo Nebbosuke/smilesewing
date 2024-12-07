@@ -16,11 +16,9 @@ import SelectTwo from "./selectTwo";
 import SelectThree from "./selectThree";
 import SelectFour from "./selectFour";
 import React, { useLayoutEffect, useState } from "react";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { Link as Scroll } from "react-scroll";
-import ReturnTop2 from "../component/ReturnTop2";
-import Jump from "../component/Jump";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import lesson from "../images/lesson.svg";
+import CalcWinSize from "../component/CalcWinSize";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -110,15 +108,13 @@ const Selection = () => {
       className="text-black bg-gradient-to-bl from-orange-100 via-white to-orange-100 py-12"
     >
       <div className="container flex flex-col mx-auto items-center px-5 py-10">
-        <p className="flex flex-row w-full md:text-5xl text-2xl text-left mb-6 gap-3">
-          <div className="flex flex-row w-9/12">
-            <MenuBookIcon fontSize="inherit" color="warning" />
-            <p>レッスンコース</p>
-          </div>
-          {/* <div className="w-1/2 flex justify-end">
-            <Jump id={"top"} value={"トップへ"} />
-          </div> */}
-        </p>
+        <div className="flex flex-col w-11/12 items-center border-b-8 border-orange-300 pb-2 mb-6 md:mb-14">
+          <img
+            src={lesson}
+            alt=""
+            width={CalcWinSize() === "s" ? 250 : 500}
+          ></img>
+        </div>
         <p>選べる４つのコース</p>
         <Box
           sx={{

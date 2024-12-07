@@ -1,12 +1,14 @@
+"use client";
 import { Button, Link } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CheckroomIcon from "@mui/icons-material/Checkroom";
 import { Link as Scroll } from "react-scroll";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Person2Icon from "@mui/icons-material/Person2";
 import img2 from "./img/IMG_4605.jpg";
-import Jump from "../../component/Jump";
+import koushi from "../../images/koushi.svg";
+import CalcWinSize from "../../component/CalcWinSize";
+import name_kan from "../../images/name_kan.svg";
+import name_en from "../../images/name_en.svg";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -41,29 +43,36 @@ function Teacher() {
         className="text-gray-700 bg-gradient-to-br from-orange-100 via-white to-orange-100  pt-5 "
       >
         <div className="container flex mx-auto flex-col md:flex-row items-center px-5 py-16 ">
-          <div className="md:w-1/2 flex-grow text-center md:text-left">
-            <div className="w-full flex flex-row md:text-5xl text-2xl md:pb-10 pb-6">
-              <Person2Icon fontSize="inherit" color="warning" />
-              <div className="w-full flex items-center">
-                <div className="w-2/3 flex justify-start text-black">講師</div>
-                {/* <div className="w-1/3 flex justify-end items-end">
-                  <Jump id={"top"} value={"トップへ"} />
-                </div> */}
-              </div>
+          <div className="md:w-1/2 flex flex-col flex-grow items-center text-center md:text-left">
+            <div className="flex flex-col w-11/12 items-center border-b-8 border-orange-300 pb-2 mb-6 md:mb-14">
+              <img
+                src={koushi}
+                alt=""
+                width={CalcWinSize() === "s" ? 72 : 130}
+              ></img>
             </div>
-
-            <div></div>
             <h1 className="w-full sm:text-6xl flex md:flex-row flex-col items-center text-3xl font-medium text-gray-900 gap-3">
-              <div className="md:w-1/2 flex pb-4 md:pl-6 md:justify-start">
-                森川 絵美
+              <div className="md:w-1/2 flex md:flex-row flex-col pb-4 md:pl-6 justify-center md:justify-start gap-2 md:gap-14">
+                <img
+                  src={name_kan}
+                  alt=""
+                  width={CalcWinSize() === "s" ? 150 : 300}
+                ></img>
+                <div className="flex flex-col justify-end items-center">
+                  <img
+                    src={name_en}
+                    alt=""
+                    width={CalcWinSize() === "s" ? 120 : 250}
+                  ></img>
+                </div>
               </div>
             </h1>
-            <div className="flex md:flex-row flex-col items-center">
+            <div className="flex md:flex-row flex-col items-center mt-3">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 text-center mx-6 mb-6">
                 <img src={img2} alt=""></img>
               </div>
               <div>
-                <p className="flex flex-col justify-between h-full lg:text-lg">
+                <p className="flex flex-col justify-between h-full md:text-xl">
                   <p className="mb-3">
                     {/* <CheckroomIcon fontSize="inherit" color="warning" /> */}
                     洋裁の経験は{today.getFullYear() - 1992}

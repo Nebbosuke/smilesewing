@@ -4,11 +4,11 @@ import Jump from "./Jump";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ImgDialog from "./ImgDialog";
 import { useLayoutEffect, useState } from "react";
 import imgList from "../section/gallery/ImgList";
-import ConstructionIcon from "@mui/icons-material/Construction";
+import gallery from "../images/gallery.svg";
+import CalcWinSize from "./CalcWinSize";
 
 const Gallery = () => {
   const useWindowSize = (): string => {
@@ -36,15 +36,15 @@ const Gallery = () => {
     <>
       <section
         id="gallery"
-        className="text-black bg-gradient-to-br from-orange-100 via-white to-orange-100 py-12 pb-24 flex flex-col"
+        className="text-black bg-gradient-to-bl from-orange-100 via-white to-orange-100 py-12 pb-24 flex flex-col"
       >
         <div className="container flex mx-auto flex-col items-center px-5">
-          <div className="flex flex-row w-full md:text-5xl text-2xl text-left mb-6 gap-3">
-            <CameraAltIcon fontSize="inherit" color="warning" />
-            <p className="w-2/3">ギャラリー</p>
-            <p className="w-1/3 flex justify-end">
-              <Jump id={"top"} value={"トップへ"} />
-            </p>
+          <div className="flex flex-col w-11/12 items-center border-b-8 border-orange-300 pb-2 mb-6 md:mb-14">
+            <img
+              src={gallery}
+              alt=""
+              width={CalcWinSize() === "s" ? 190 : 380}
+            ></img>
           </div>
           <div>
             <div className="flex flex-col">

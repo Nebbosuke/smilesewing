@@ -4,6 +4,7 @@ import Contact from "./component/Contact";
 import Gallery from "./component/Gallery";
 import Header from "./section/header/Header";
 import Teacher from "./section/teacher/Teacher";
+import Alterations from "./component/alterations";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Teacher />
       <Selection />
+      <Alterations />
       <Gallery />
       <Contact />
     </main>

@@ -29,7 +29,7 @@ function Header() {
           </div>
 
           <div className="md:w-1/3 flex justify-end pt-3">
-            <ButtonGroups />
+            {/* <ButtonGroups /> */}
           </div>
         </div>
       </header>
