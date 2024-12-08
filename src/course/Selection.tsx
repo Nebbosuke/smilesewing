@@ -19,6 +19,7 @@ import React, { useLayoutEffect, useState } from "react";
 import { Link as Scroll } from "react-scroll";
 import lesson from "../images/lesson.svg";
 import CalcWinSize from "../component/CalcWinSize";
+import selection from "./image/selection.svg";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -115,7 +116,8 @@ const Selection = () => {
             width={CalcWinSize() === "s" ? 250 : 500}
           ></img>
         </div>
-        <p>選べる４つのコース</p>
+        <img src={selection} alt="" width={300} className="mb-1"></img>
+        {CalcWinSize() === "s" && <p>１～４をタップしてください</p>}
         <Box
           sx={{
             borderBottom: 1,
@@ -197,6 +199,14 @@ const Selection = () => {
         <CustomTabPanel value={value} index={3}>
           <SelectFour />
         </CustomTabPanel>
+        {CalcWinSize() === "s" && (
+          <Scroll to="selection" smooth>
+            <button className="hover:text-blue-600 underline">
+              コース選択に戻る
+            </button>
+          </Scroll>
+        )}
+
         <div className="w-full flex flex-col py-5">
           <div className="py-3 flex  md:flex-row flex-col items-center">
             <div className="md:w-1/3"></div>

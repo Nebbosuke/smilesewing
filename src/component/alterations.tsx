@@ -4,6 +4,7 @@ import onaoshi from "../images/onaoshi.svg";
 import sell from "../images/sell.svg";
 import senchaku from "../images/senchaku.svg";
 import waribiki from "../images/waribiki.svg";
+import fix from "../images/fix_clothes.svg";
 import { Link as Scroll } from "react-scroll";
 import { Button } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
@@ -41,7 +42,8 @@ const Alterations = () => {
               サイズ・デザイン直しは、お客様の体に合うよう、細部にまでこだわって丁寧にお直しいたします。
             </p>
           </div>
-          <div className="flex flex-col gap-8 md:gap-14 items-center mx-5">
+          <img src={fix} alt="" width={200}></img>
+          <div className="flex flex-col gap-8 md:gap-14 items-center mx-5 p-5 bg-orange-200 rounded-xl">
             <img src={sell} alt="" width={1000}></img>
             <img
               src={senchaku}

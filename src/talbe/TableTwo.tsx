@@ -9,6 +9,7 @@ import {
   TableCell,
   tableCellClasses,
 } from "@mui/material";
+import CalcWinSize from "../component/CalcWinSize";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -38,18 +39,54 @@ const TableTwo: React.FC<TableTwoProps> = ({ title }) => {
           <TableHead>
             <TableRow>
               <TableCell></TableCell>
-              <StyledTableCell align="right">２時間コース</StyledTableCell>
-              <StyledTableCell align="right">３時間コース</StyledTableCell>
+              <StyledTableCell align="right">
+                {CalcWinSize() === "s" ? (
+                  <>
+                    <p>２時間</p>
+                    <p>コース</p>
+                  </>
+                ) : (
+                  <>２時間コース</>
+                )}
+              </StyledTableCell>
+              <StyledTableCell align="right">
+                {CalcWinSize() === "s" ? (
+                  <>
+                    <p>３時間</p>
+                    <p>コース</p>
+                  </>
+                ) : (
+                  <>３時間コース</>
+                )}
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
-              <StyledTableCell>１回 / 月</StyledTableCell>
+              <StyledTableCell>
+                {CalcWinSize() === "s" ? (
+                  <>
+                    <p>１回</p>
+                    <p>/ 月</p>
+                  </>
+                ) : (
+                  <>１回 / 月</>
+                )}
+              </StyledTableCell>
               <TableCell align="right">3,000円</TableCell>
               <TableCell align="right">3,750円</TableCell>
             </TableRow>
             <TableRow>
-              <StyledTableCell>４回 / 月</StyledTableCell>
+              <StyledTableCell>
+                {CalcWinSize() === "s" ? (
+                  <>
+                    <p>４回</p>
+                    <p>/ 月</p>
+                  </>
+                ) : (
+                  <>４回 / 月</>
+                )}
+              </StyledTableCell>
               <TableCell align="right">
                 <p>11,500円</p>
                 <p text-gray-600></p>

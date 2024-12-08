@@ -1,11 +1,18 @@
+import CalcWinSize from "../component/CalcWinSize";
 import TableOne from "../talbe/TableOne";
+import c1 from "./image/c1.svg";
+import a1 from "../photo/jiyuu/a1.png";
+import a2 from "../photo/jiyuu/a2.png";
+import a3 from "../photo/jiyuu/a3.png";
+import a4 from "../photo/jiyuu/a4.png";
+import a5 from "../photo/jiyuu/a5.png";
 
 const SelectOne = () => {
   return (
-    <main className="items-center">
+    <main className="items-center md:text-xl text-gray-700">
       <div className="mb-20 text-center">
-        <div className="md:w-1/2 md:text-3xl text-xl mx-auto text-center mb-5 px-3 py-3 rounded-full text-white bg-blue-600 ">
-          自由レッスンコース
+        <div className="flex justify-center ">
+          <img src={c1} alt="" width={CalcWinSize() === "s" ? 275 : 500}></img>
         </div>
         <div className="flex md:flex-row flex-col gap-6 justify-center items-center my-20">
           <p className="w-40 h-40 flex justify-center items-center rounded-full border-4 border-blue-300 ">
@@ -22,6 +29,13 @@ const SelectOne = () => {
           </p>
         </div>
       </div>
+      {/* <div className="flex flex-col sm:flex-row mb-14 items-center gap-5">
+        <img src={a1} alt="" width={300}></img>
+        <img src={a2} alt="" width={300}></img>
+        <img src={a3} alt="" width={300}></img>
+        <img src={a4} alt="" width={300}></img>
+        <img src={a5} alt="" width={300}></img>
+      </div> */}
       <TableOne />
     </main>
   );

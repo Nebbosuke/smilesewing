@@ -1,11 +1,12 @@
 import TableThree from "../talbe/TableThree";
+import c4 from "./image/c4.svg";
 
 const SelectFour = () => {
   return (
-    <main className="items-center text-center">
+    <main className="items-center text-center md:text-xl text-gray-700">
       <div className="mb-20">
-        <div className="md:w-1/2 md:text-3xl text-xl mx-auto text-center mb-5 px-3 py-3 rounded-full text-white bg-red-600 ">
-          着物リメイクレッスンコース
+        <div className="flex justify-center ">
+          <img src={c4} alt="" width={700}></img>
         </div>
         <div className="flex flex-row md:gap-6 lg:gap-10 gap-1 justify-center items-center my-20">
           <p className="w-40 h-40 flex flex-col justify-center items-center rounded-full border-4 border-red-300">

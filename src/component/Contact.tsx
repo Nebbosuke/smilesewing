@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ReturnTop from "./ReturnTop";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const Contact = () => {
   return (
@@ -55,30 +56,47 @@ const Contact = () => {
                 <p className="md:text-xl text-base ml-1">
                   （JR東金線福俵駅より徒歩10分）
                 </p>
+                <p className="md:text-xl text-base ml-1">
+                  <Link underline="always">
+                    <a
+                      target="_blank"
+                      href="https://maps.app.goo.gl/faN5YzrBRK9LaZFr6"
+                    >
+                      Googleマップで場所を見る
+                      <OpenInNewIcon fontSize="small" />
+                    </a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
           <div className="text-xl flex flex-row items-center justify-center">
             <div className="mr-6">
-              <Link
-                href="https://www.facebook.com/people/%E6%A3%AE%E5%B7%9D-%E7%B5%B5%E7%BE%8E/pfbid022pxqsfhYGX32d3oLrU7qrkbWX7T9SMijmu9qH6nLH35Txs1YqQTeR8J7dR7nMV6hl/"
-                underline="none"
-              >
-                <FacebookIcon fontSize="large" />
+              <Link underline="none">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/people/%E6%A3%AE%E5%B7%9D-%E7%B5%B5%E7%BE%8E/pfbid022pxqsfhYGX32d3oLrU7qrkbWX7T9SMijmu9qH6nLH35Txs1YqQTeR8J7dR7nMV6hl/"
+                >
+                  <FacebookIcon fontSize="large" />
+                </a>
               </Link>
             </div>
             <div className="mr-6">
-              <Link
-                href="https://www.instagram.com/emimorikawa1997/"
-                underline="none"
-              >
-                <InstagramIcon fontSize="large" />
+              <Link underline="none">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/emimorikawa1997/"
+                >
+                  <InstagramIcon fontSize="large" />
+                </a>
               </Link>
             </div>
             <div className="pt-1">
-              <Link href="https://blog.goo.ne.jp/atorie1997" underline="none">
-                {/* <OpenInNewIcon fontSize="large" /> */}
-                ブログ
+              <Link underline="none">
+                <a target="_blank" href="https://blog.goo.ne.jp/atorie1997">
+                  ブログ
+                  <OpenInNewIcon fontSize="small" />
+                </a>
               </Link>
             </div>
           </div>
