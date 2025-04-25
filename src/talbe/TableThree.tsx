@@ -49,16 +49,6 @@ const TableTwo: React.FC<TableTwoProps> = ({ title }) => {
                   <>２時間コース</>
                 )}
               </StyledTableCell>
-              <StyledTableCell align="right">
-                {CalcWinSize() === "s" ? (
-                  <>
-                    <p>３時間</p>
-                    <p>コース</p>
-                  </>
-                ) : (
-                  <>３時間コース</>
-                )}
-              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -73,8 +63,7 @@ const TableTwo: React.FC<TableTwoProps> = ({ title }) => {
                   <>１回 / 月</>
                 )}
               </StyledTableCell>
-              <TableCell align="right">3,000円</TableCell>
-              <TableCell align="right">4,500円</TableCell>
+              <TableCell align="right">3,500円</TableCell>
             </TableRow>
           </TableBody>
         </Table>

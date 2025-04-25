@@ -1,6 +1,7 @@
 import CalcWinSize from "../component/CalcWinSize";
 import TableTwo from "../talbe/TableTwo";
 import c2 from "./image/c2.svg";
+import sentence from "./image/sentence_b1.svg";
 
 const SelectTwo = () => {
   return (
@@ -9,10 +10,15 @@ const SelectTwo = () => {
         <div className="flex justify-center ">
           <img src={c2} alt="" width={CalcWinSize() === "s" ? 275 : 500}></img>
         </div>
-        <div className="flex md:flex-row flex-col gap-6 justify-center items-center my-20">
-          <p className="w-40 h-40 flex justify-center items-center rounded-full border-4 border-purple-300 ">
-            デザインレッスン
-          </p>
+        <div className="flex flex-col gap-1 justify-center items-center my-10 sm:my-20">
+          こんな人におすすめ！
+          <div className="border-4 border-purple-500 rounded-2xl flex flex-col items-center justify-center gap-8 py-8 sm:py-12 px-3 sm:px-24">
+            <img
+              src={sentence}
+              alt=""
+              width={CalcWinSize() === "s" ? 500 : 600}
+            ></img>
+          </div>
         </div>
         <div className="mb-3">
           <p className="mb-6">

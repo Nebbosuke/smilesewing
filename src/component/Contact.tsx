@@ -49,7 +49,6 @@ const Contact = () => {
               <div className="text-yellow-300">
                 <PlaceIcon fontSize="inherit" />
               </div>
-
               <div>
                 <p className="ml-1">千葉県東金市福俵476</p>
                 <p className="ml-1">アルソアビル２F</p>
@@ -66,6 +65,13 @@ const Contact = () => {
                       <OpenInNewIcon fontSize="small" />
                     </a>
                   </Link>
+                </p>
+                <p className="md:text-xl text-base ml-1 mt-2 flex flex-row">
+                  <div className="">営業時間：</div>
+                  <div>
+                    <div>10:00 - 12:00</div>
+                    <div>13:30 - 15:30</div>
+                  </div>
                 </p>
               </div>
             </div>

@@ -116,8 +116,10 @@ const Selection = () => {
             width={CalcWinSize() === "s" ? 250 : 500}
           ></img>
         </div>
-        <img src={selection} alt="" width={300} className="mb-1"></img>
-        {CalcWinSize() === "s" && <p>１～４をタップしてください</p>}
+        <img src={selection} alt="" width={300} className="mb-2 sm:mb-5"></img>
+        {CalcWinSize() === "s" && (
+          <p className="mb-3">１～４をタップしてください</p>
+        )}
         <Box
           sx={{
             borderBottom: 1,

@@ -6,6 +6,8 @@ import a2 from "../photo/jiyuu/a2.png";
 import a3 from "../photo/jiyuu/a3.png";
 import a4 from "../photo/jiyuu/a4.png";
 import a5 from "../photo/jiyuu/a5.png";
+import sentence from "./image/sentence_a1.svg";
+import sentence2 from "./image/sentence_a2.svg";
 
 const SelectOne = () => {
   return (
@@ -14,13 +16,12 @@ const SelectOne = () => {
         <div className="flex justify-center ">
           <img src={c1} alt="" width={CalcWinSize() === "s" ? 275 : 500}></img>
         </div>
-        <div className="flex md:flex-row flex-col gap-6 justify-center items-center my-20">
-          <p className="w-40 h-40 flex justify-center items-center rounded-full border-4 border-blue-300 ">
-            好きな服をつくる
-          </p>
-          <p className="w-40 h-40 flex justify-center items-center rounded-full border-4 border-blue-300 ">
-            洋服のお直し
-          </p>
+        <div className="flex flex-col gap-1 justify-center items-center my-10 sm:my-20">
+          こんな人におすすめ！
+          <div className="border-4 border-blue-400 rounded-2xl flex flex-col items-center justify-center gap-8 py-8 sm:py-12 px-12 sm:px-24">
+            <img src={sentence} alt="" width={450}></img>
+            <img src={sentence2} alt="" width={450}></img>
+          </div>
         </div>
         <div className="mb-3">
           <p className="mb-6">ご自分のお好きな服を体形に合わせて作るレッスン</p>

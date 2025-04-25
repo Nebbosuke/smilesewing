@@ -39,7 +39,7 @@ const theme = createTheme({
 function Teacher() {
   let today = new Date();
   return (
-    <main className="bg-gradient-to-bl">
+    <main className="bg-gradient-to-bl" id="teacher">
       <section
         id="intro"
         className="text-gray-700 bg-gradient-to-br from-orange-100 via-white to-orange-100  pt-5 "

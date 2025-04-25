@@ -13,6 +13,7 @@ import student from "./img/student.svg";
 import fix from "./img/fix_clothes.svg";
 import sentence from "./img/sentence.svg";
 import CalcWinSize from "../../component/CalcWinSize";
+import { Link as Scroll } from "react-scroll";
 
 function Header() {
   let today = new Date();
@@ -68,6 +69,15 @@ function Header() {
                   年です。
                 </div>
                 <img src={teacher} alt="" width={100}></img>
+                <Scroll
+                  to="teacher"
+                  smooth
+                  offset={CalcWinSize() === "s" ? 0 : -60}
+                >
+                  <button className="hover:text-blue-600 text-base">
+                    詳しく見る
+                  </button>
+                </Scroll>
               </div>
               <div className="sm:w-1/2 flex flex-col items-center justify-center gap-3 rounded-3xl  py-5 px-2 border-2 border-orange-400 shadow-xl">
                 <img src={setsubi} alt="" width={50}></img>
@@ -84,6 +94,15 @@ function Header() {
                   定員３～4名のきめ細かなレッスンを心がけております。
                 </div>
                 <img src={student} alt="" width={100}></img>
+                <Scroll
+                  to="selection"
+                  smooth
+                  offset={CalcWinSize() === "s" ? 0 : -60}
+                >
+                  <button className="hover:text-blue-600 text-base">
+                    詳しく見る
+                  </button>
+                </Scroll>
               </div>
               <div className="sm:w-1/2 flex flex-col items-center justify-center gap-3 rounded-3xl  py-5 px-2 border-2 border-orange-400 shadow-xl">
                 <img src={onaoshi} alt="" width={120}></img>
@@ -91,6 +110,15 @@ function Header() {
                   お洋服のお直しも承っております。サイズ・デザイン直しは、お客様の体に合うよう、細部にまでこだわって丁寧にお直しいたします。
                 </div>
                 <img src={fix} alt="" width={100}></img>
+                <Scroll
+                  to="alterations"
+                  smooth
+                  offset={CalcWinSize() === "s" ? 0 : -100}
+                >
+                  <button className="hover:text-blue-600 text-base">
+                    詳しく見る
+                  </button>
+                </Scroll>
               </div>
             </div>
           </div>
